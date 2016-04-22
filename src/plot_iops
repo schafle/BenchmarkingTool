@@ -1,0 +1,14 @@
+#!/usr/bin/gnuplot
+set term png
+set output "IOPS.png"
+set terminal png size 1920,1200 enhanced font "Helvetica,20"
+set title "Sampling IOPs for 600 seconds"
+set xlabel "Time(Seconds)"
+set ylabel "GIOPS"
+set ytics "0.5"
+set xtics "50"
+plot "6i.data" title "Exp1" with lines,\
+     "7i.data" title "Exp2" with lines,\
+     "8i.data" title "Exp3" with lines,\
+     "avgi.data" title "Average" with lines
+pause -1 "Hit any key to continue"

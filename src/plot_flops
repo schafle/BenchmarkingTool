@@ -1,0 +1,14 @@
+#!/usr/bin/gnuplot
+set term png
+set output "FLOPS.png"
+set terminal png size 1920,1200 enhanced font "Helvetica,20"
+set title "Sampling GFLOPs for 600 seconds"
+set ylabel "GFLOPS"
+set xlabel "Time(Seconds)"
+set ytics "0.5"
+set xtics "50"
+plot "6f.data" title "Exp1" with lines,\
+     "7f.data" title "Exp2" with lines,\
+     "8f.data" title "Exp3" with lines,\
+     "avgf.data" title "Average" with lines
+pause -1 "Hit any key to continue"
